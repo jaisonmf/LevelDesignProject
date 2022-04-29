@@ -19,6 +19,10 @@ public class DangerZone : MonoBehaviour
             transform.position = respawnPoint;
             Debug.Log("you stupid");
         }
+
+        if (checkpoint.gameObject.tag == "Collapse")
+        {
+            DestroyObject(checkpoint.gameObject);        }
     }
 
 }
