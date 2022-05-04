@@ -8,6 +8,8 @@ TagManager:
   - Reset
   - Checkpoint
   - PlayerBody
+  - Collapse
+  - Rock
   layers:
   - Default
   - TransparentFX

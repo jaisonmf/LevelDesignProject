@@ -7,6 +7,8 @@ public class DangerZone : MonoBehaviour
     public Vector3 respawnPoint;
 
 
+
+
     void OnTriggerEnter(Collider checkpoint)
     {
         if (checkpoint.tag == "Checkpoint")
@@ -20,9 +22,7 @@ public class DangerZone : MonoBehaviour
             Debug.Log("you stupid");
         }
 
-        if (checkpoint.gameObject.tag == "Collapse")
-        {
-            DestroyObject(checkpoint.gameObject);        }
+
     }
 
 }
