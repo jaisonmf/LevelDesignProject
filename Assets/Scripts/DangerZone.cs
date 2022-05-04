@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DangerZone : MonoBehaviour
 {
     public Vector3 respawnPoint;
-
-
 
 
     void OnTriggerEnter(Collider checkpoint)
@@ -22,6 +21,10 @@ public class DangerZone : MonoBehaviour
             Debug.Log("you stupid");
         }
 
+        if (checkpoint.gameObject.tag == "Enemy")
+        {
+            SceneManager.LoadScene(Application.loadedLevel);
+        }
 
     }
 
