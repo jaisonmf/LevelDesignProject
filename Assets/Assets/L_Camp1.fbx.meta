@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: torch
-    second: {fileID: 2100000, guid: a729f43cbc4599f4f9677d4e7bcc7b6b, type: 2}
+    second: {fileID: 2100000, guid: 7ccb55987627c324f8b5fb6cb4efbd7f, type: 2}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule

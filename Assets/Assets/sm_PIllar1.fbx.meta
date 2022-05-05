@@ -13,7 +13,7 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: sm_Pillarcrack
-    second: {fileID: 2800000, guid: fe5017114be4f7a4ab337b5a5244238d, type: 3}
+    second: {fileID: 2800000, guid: 24f6ff06ef354ef4eaa2a1c793652564, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
