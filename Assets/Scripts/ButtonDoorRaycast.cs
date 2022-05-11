@@ -11,13 +11,15 @@ public class ButtonDoorRaycast : MonoBehaviour
 
     private ButtonDoorController raycastedObj;
 
-    [SerializeField] private KeyCode openDoorKey = KeyCode.Keypad0;
+    [SerializeField] private KeyCode openDoorKey = KeyCode.E;
 
     [SerializeField] private Image crosshair = null;
     private bool isCrosshairActive;
     private bool doOnce;
 
     private const string interactableTag = "Trigger";
+
+    public GameObject triggerbox;
 
     private void Update()
     {
@@ -42,6 +44,7 @@ public class ButtonDoorRaycast : MonoBehaviour
                 if (Input.GetKeyDown(openDoorKey))
                 {
                     raycastedObj.PlayAnimation();
+                    triggerbox.SetActive(true);
                 }
             }
         }

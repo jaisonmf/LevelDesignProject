@@ -6,13 +6,13 @@ public class ButtonDoorController : MonoBehaviour
 {
     [SerializeField] private Animator doorAnim = null;
 
-    [SerializeField] private string openAnimationName = "KeyPickup";
+    [SerializeField] private string openAnimationName = "keys";
   
 
 
     public void PlayAnimation()
     {
-        doorAnim.Play(openAnimationName, 0, 0.0f);
+        GetComponent<Animator>().SetTrigger("pickup");
     }
 
 }
