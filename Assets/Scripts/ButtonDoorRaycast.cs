@@ -20,7 +20,10 @@ public class ButtonDoorRaycast : MonoBehaviour
     private const string interactableTag = "Trigger";
 
     public GameObject triggerbox;
+
     public GameObject textbox;
+    public Text textField;
+    private bool fieldIsActive;
 
 
     private void Update()
@@ -68,11 +71,13 @@ public class ButtonDoorRaycast : MonoBehaviour
         if (on && !doOnce)
         {
             crosshair.color = Color.red;
+            textField.gameObject.SetActive(true);
         }
         else
         {
             crosshair.color = Color.white;
             isCrosshairActive = false;
+            textField.gameObject.SetActive(false);
         }
     }
 
