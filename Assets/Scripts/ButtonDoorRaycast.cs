@@ -20,6 +20,8 @@ public class ButtonDoorRaycast : MonoBehaviour
     private const string interactableTag = "Trigger";
 
     public GameObject triggerbox;
+    public GameObject textbox;
+
 
     private void Update()
     {
@@ -45,6 +47,8 @@ public class ButtonDoorRaycast : MonoBehaviour
                 {
                     raycastedObj.PlayAnimation();
                     triggerbox.SetActive(true);
+                    textbox.SetActive(false);
+
                 }
             }
         }
