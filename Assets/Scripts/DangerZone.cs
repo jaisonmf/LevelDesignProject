@@ -9,13 +9,12 @@ public class DangerZone : MonoBehaviour
     public Vector3 respawnPoint;
     public Camera lose;
     public Camera player;
-    public Camera win;
 
     public Text textField1;
     public Text textField2;
     public Text textField3;
-    public Text textField4;
     public GameObject gameover;
+    public GameObject character;
 
 
     void OnTriggerEnter(Collider checkpoint)
@@ -38,9 +37,12 @@ public class DangerZone : MonoBehaviour
             textField2.gameObject.SetActive(true);
             textField3.gameObject.SetActive(true);
             gameover.GetComponent<GameOver>().restart();
+            character.SetActive(false);   
+
         }   
 
 
     }
+
 
 }
