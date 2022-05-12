@@ -11,7 +11,6 @@ public class Temple : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("loser");
             objectToMove.GetComponent<Animator>().SetTrigger("temple");
             
         }

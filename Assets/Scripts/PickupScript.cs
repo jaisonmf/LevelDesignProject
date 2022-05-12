@@ -12,7 +12,6 @@ public class PickupScript : MonoBehaviour
     {
         if (text.gameObject.tag == "Player")
         {
-            Debug.Log("nerddddddd");
             textField.gameObject.SetActive(true);
             fieldIsActive = true;
         }

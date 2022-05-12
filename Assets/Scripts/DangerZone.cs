@@ -18,7 +18,6 @@ public class DangerZone : MonoBehaviour
         if (checkpoint.gameObject.tag == "Reset")
         {
             transform.position = respawnPoint;
-            Debug.Log("you stupid");
         }
 
         if (checkpoint.gameObject.tag == "Enemy")
