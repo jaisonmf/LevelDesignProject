@@ -2,10 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class DangerZone : MonoBehaviour
 {
     public Vector3 respawnPoint;
+    public Camera lose;
+    public Camera player;
+
+    public Text textField1;
+    public Text textField2;
+    public Text textField3;
+    public GameObject gameover;
 
 
     void OnTriggerEnter(Collider checkpoint)
@@ -22,7 +30,15 @@ public class DangerZone : MonoBehaviour
 
         if (checkpoint.gameObject.tag == "Enemy")
         {
-            SceneManager.LoadScene(Application.loadedLevel);
+            player.enabled = false;
+            lose.enabled = true;
+            textField1.gameObject.SetActive(true);
+            textField2.gameObject.SetActive(true);
+            textField3.gameObject.SetActive(true);
+            gameover.GetComponent<GameOver>().restart();
+
+
+
         }
 
     }
