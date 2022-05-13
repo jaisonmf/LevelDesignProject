@@ -12,6 +12,7 @@ TagManager:
   - Rock
   - Trigger
   - Win
+  - Ambience
   layers:
   - Default
   - TransparentFX

@@ -16,6 +16,8 @@ public class DangerZone : MonoBehaviour
     public GameObject gameover;
     public GameObject character;
 
+    public AudioSource ambience;
+
 
     void OnTriggerEnter(Collider checkpoint)
     {
@@ -39,7 +41,12 @@ public class DangerZone : MonoBehaviour
             gameover.GetComponent<GameOver>().restart();
             character.SetActive(false);   
 
-        }   
+        }
+        
+        if (checkpoint.gameObject.tag == "Ambience")
+        {
+            ambience.gameObject.SetActive(false);
+        }
 
 
     }
